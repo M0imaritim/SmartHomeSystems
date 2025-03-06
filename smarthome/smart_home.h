@@ -30,11 +30,11 @@ extern char hexaKeys[ROWS][COLS];
 extern Keypad keypad;
 extern String enteredCode;
 extern String correctCode;
-extern bool alarmActive = true;
+extern bool alarmActive;
 
 // Buzzer and LED settings
 #define BUZZER_PIN 5
-#define LED_PIN 33
+#define LED_PIN 4
 
 
 // Timing and alarm
@@ -48,8 +48,9 @@ extern WiFiUDP ntpUDP;
 extern NTPClient timeClient;
 
 // Function declarations
-void initializeKeypad();
-void readSensors(); 
+void setupSensors();
+void readGasSensor();
+void readTemperatureSensor();
 void updateLED();
 void updateBuzzer();
 void checkKeypad();

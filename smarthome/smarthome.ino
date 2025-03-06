@@ -1,8 +1,8 @@
 // main.ino
 #include "smart_home.h"
 
-const char* ssid = "Jerry";
-const char* password = "12345#6789";
+const char* ssid = "";
+const char* password = "";
 
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org", 0, 60000);
